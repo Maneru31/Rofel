@@ -7,18 +7,18 @@
     tools:context=".SecondActivity"
     android:background="#2E2D2D">
 
-<FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
 
 
     <ImageView
+
         android:id="@+id/mythical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="400dp"
         android:src="@drawable/mythical"
-        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:alpha="0.7"/>
 
 
@@ -28,13 +28,27 @@
         android:layout_height="wrap_content"
         android:textSize="30sp"
         android:text="Ты зачем сюда перешёл?"
-        android:layout_gravity="center|top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/mythical"
         android:textStyle="bold"
-
-
         />
 
 
-</FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/textmyth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/mythical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:text="Нажми на картинку если осилишься"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

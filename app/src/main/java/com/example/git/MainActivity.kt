@@ -1,8 +1,11 @@
 package com.example.git
 
+
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.example.git.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -12,8 +15,16 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        binding.
+        binding.buttnonBN.setOnClickListener {
+            Toast.makeText(applicationContext, "так уж и быть... Зажми кнопку", Toast.LENGTH_LONG).show()
+        }
+
+        binding.buttnonBN.setOnLongClickListener {
+            startActivity(Intent(this, SecondActivity::class.java))
+            true
+        }
 
 
-    }
+        }
+
 }
